@@ -1,0 +1,45 @@
+{
+  "title": "Music",
+  "subtitle": "Explore my musical work across all my main platforms",
+  
+  "labels": {
+    "featuredPlatforms": "Featured Platforms",
+    "latestReleases": "Listen to my latest releases",
+    "exploreContent": "Explore Content",
+    "finalNoteMessage": "My music is constantly evolving",
+    "finalNoteDescription": "And I’m excited to share every step of the journey with you. Thank you for your continued support!"
+  },
+  
+  "sections": [
+    {
+      "id": "youtube",
+      "title": "YouTube",
+      "description": "Videos, tracks, and public content"
+    },
+    {
+      "id": "spotify",
+      "title": "Spotify",
+      "description": "Listen to my official releases"
+    },
+    {
+      "id": "soundcloud",
+      "title": "SoundCloud",
+      "description": "Demos and experimental projects"
+    },
+    {
+      "id": "youtube-music",
+      "title": "YouTube Music",
+      "description": "Official music streaming"
+    },
+    {
+      "id": "apple-music",
+      "title": "Apple Music",
+      "description": "Music in lossless audio quality"
+    },
+    {
+      "id": "newgrounds",
+      "title": "Newgrounds",
+      "description": "Songs, remixes, and tracks usable in Geometry Dash"
+    }
+  ]
+}

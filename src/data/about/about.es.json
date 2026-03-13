@@ -1,0 +1,44 @@
+{
+  "intro": {
+    "title": "Acerca de mí",
+    "text": "¡Hola! Soy Alan, mejor conocido en internet como wakku o Walker, soy alguien apasionado por la música, arte, diseño y animación. Me gusta probar cosas nuevas."
+  },
+  "characterCard": {
+    "pronouns": "Él",
+    "age": "20 años",
+    "location": "México",
+    "birthday": "27 de mayo"
+  },
+  "currently": {
+    "title": "Actualmente",
+    "items": [
+      "Trabajando en nuevas canciones",
+      "Explorando nuevos estilos musicales",
+      "Programando mi portafolio web"
+    ]
+  },
+  "mdRules": {
+    "likes": [
+      "Ser directo, honesto y respetuoso al contactarme",
+      "Ser claro sobre el motivo de contacto y lo que se espera",
+      "Paciencia y buena comunicación",
+      "Respetar mis tiempos y espacio personal",
+      "Ser amable y considerado en la comunicación",
+      "Respetar mis límites y no insistir sin una razón válida"
+    ],
+    "dislikes": [
+      "Solo decir 'hola' o '¿estás disponible?' sin contexto alguno",
+      "Hablarme sin ningún motivo",
+      "Presionar para obtener una respuesta rápida",
+      "Enviar mensajes repetitivos o spam",
+      "Falta de respeto o comunicación poco clara",
+      "Invadir mi espacio personal sin una razón válida"
+    ]
+  },
+  "preferences": "Preferencias",
+  "cta": {
+    "title": "¿Interesado en trabajar juntos?",
+    "description": "Ya sea que tengas una solicitud de comisión o simplemente quieras hablar sobre proyectos creativos, ¡no dudes en contactarme!",
+    "button": "Contáctame"
+  }
+}

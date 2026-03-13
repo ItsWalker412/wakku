@@ -1,0 +1,186 @@
+{
+  "title": "Términos y Condiciones",
+  "lastUpdated": "Actualizado: Febrero 2026",
+  "intro": "Estos términos aplican para todas las comisiones y canciones en general realizadas conmigo. Al solicitar una comisión, aceptas automáticamente estas condiciones.",
+  
+  "sections": [
+    {
+      "id": "process",
+      "title": "Proceso de comisión",
+      "content": [
+        "El cliente me contacta con una idea clara del encargo.",
+        "Se revisa si el proyecto es viable.",
+        "Se realiza el pago a través de Ko-fi.",
+        "Inicio el trabajo una vez confirmado el pago.",
+        "Entrego el producto final dentro del plazo acordado (Puede ser extendido en caso de necesidad)."
+      ]
+    },
+    {
+      "id": "payments",
+      "title": "Pagos",
+      "content": [
+        "Todos los pagos se realizan por adelantado.",
+        "Los pagos se manejan a través de Ko-fi.",
+        "No inicio ningún trabajo sin pago confirmado."
+      ]
+    },
+    {
+      "id": "client_responsibility",
+      "title": "Responsabilidad del Cliente",
+      "content": [
+        "El cliente debe proporcionar información clara y referencias necesarias antes de comenzar.",
+        "Retrasos en la respuesta del cliente pueden afectar el tiempo de entrega.",
+        "Si el cliente no responde durante 14 días, la comisión puede considerarse pausada. Si pasan 30 días sin respuesta, se considera abandonada sin reembolso."
+      ]
+    },
+    {
+      "id": "revisions",
+      "title": "Revisiones",
+      "content": [
+        "Se incluyen las revisiones dadas en el plan adquirido.",
+        "Revisiones adicionales pueden incluir un costo extra.",
+        "Cambios grandes después de aprobar un boceto o demo no están incluidos."
+      ]
+    },
+    {
+      "id": "usage",
+      "title": "Uso y créditos",
+      "content": [
+        "El cliente puede usar el trabajo según lo acordado.",
+        "Siempre debe darse crédito de forma visible (Opcional en caso de haber pagado derechos totales).",
+        "No se permite revender ni reclamar autoría del trabajo, salvo que se haya pagado los derechos totales.",
+        "Como autor de la obra tengo total libertad de distribuir el trabajo en plataformas de música, a menos que se hayan pagado los derechos totales.",
+        "El trabajo puede ser mostrado en mi portafolio, salvo acuerdo previo.",
+        "El cliente es responsable de cualquier problema legal relacionado con el uso del trabajo.",
+        "El cliente es responsable de registrar correctamente la obra en plataformas si adquiere derechos totales."
+      ]
+    },
+    {
+      "id": "refunds",
+      "title": "Cancelaciones y reembolsos",
+      "content": [
+        "No se realizan reembolsos una vez iniciado el trabajo.",
+        "Si el cliente cancela antes de empezar, puede discutirse un reembolso parcial.",
+        "Si yo no puedo completar el trabajo, se realizará un reembolso completo."
+      ]
+    },
+    {
+    "id": "delivery",
+    "title": "Entrega y Archivos",
+    "content": [
+      "Los archivos finales se entregan una vez el cliente aprueba el trabajo final.",
+      "Los archivos finales en alta calidad se entregan únicamente después del pago completo.",
+      "La entrega se realiza en formato .zip organizado.",
+      "El respaldo de archivos no está garantizado después de 30 días.",
+      "Archivos editables (.flp, proyectos, MIDI crudo) no están incluidos salvo acuerdo previo.",
+      "Los derechos de uso se entregan junto con los archivos finales, según lo acordado en el plan.",
+      "Modificaciones solicitadas después de la entrega final pueden requerir un nuevo presupuesto."
+      ]
+    },
+    {
+    "id": "buyout",
+    "title": "Cesión Total de Derechos (Buyout)",
+    "content": [
+      "En caso de adquirir la cesión total de derechos, el cliente obtiene control completo sobre la explotación, modificación y distribución del trabajo.",
+      "El cliente puede usar la obra sin obligación de crédito.",
+      "El autor original no podrá revender ni reutilizar la obra para fines comerciales.",
+      "La cesión no implica transferencia de autoría moral, salvo acuerdo legal adicional."
+      ]
+    }
+  ],
+  
+  
+  "importantNotes": "Notas Importantes",
+  "notes": [
+    {
+      "title": "Plazo de respuesta del cliente",
+      "content": "Si el cliente no responde en 14 días durante el proceso, la comisión puede pausarse. Si pasan 30 días sin respuesta, se considera abandonada sin reembolso."
+    },
+    {
+      "title": "Rechazo de solicitudes",
+      "content": "Estoy en mi derecho de rechazar cualquier solicitud que no se ajuste a mis valores o que no pueda cumplir por cualquier razón. Esto incluye, pero no se limita a, contenido ilegal, ofensivo o que promueva el odio."
+    },
+    {
+      "title": "Extensión de plazos",
+      "content": "El tiempo de entrega puede variar debido a mi carga de trabajo, emergencias o complicaciones imprevistas. En caso de necesitar una extensión, se comunicará al cliente lo antes posible."
+    },
+    {
+      "title": "Derechos de autor y distribución",
+      "content": "Como creador, mantengo el derecho de mostrar el trabajo en mi portafolio y redes sociales, a menos que se haya acordado lo contrario. Además, puedo distribuir el trabajo en plataformas de música si no se adquirieron los derechos totales. El cliente es responsable de registrar correctamente la obra si adquiere derechos totales."
+    },
+    {
+      "title": "Revisiones y cambios",
+      "content": "Las revisiones incluidas en cada plan son para ajustes medianos y menores. Cambios grandes después de aprobar un boceto o demo no están incluidos y pueden requerir un nuevo presupuesto."
+    },
+    {
+      "title": "Confidencialidad",
+      "content": "No compartiré detalles de tu proyecto con terceros sin tu consentimiento, a menos que sea necesario para completar la comisión (por ejemplo, contratar músicos adicionales)."
+    }
+  ],
+  
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "q": "¿Cuánto tardas en entregar?",
+        "a": "Depende del tipo de comisión y mi carga de trabajo actual. Normalmente se cumple el plazo dado en cada plan, pero puede variar o extenderse en caso de necesidad."
+      },
+      {
+        "q": "¿Puedo solicitar cambios después de la entrega?",
+        "a": "Cambios menores pueden ser posibles dentro de un plazo razonable, pero cambios grandes o revisiones extensas después de la entrega no están incluidos y pueden requerir un nuevo presupuesto."
+      },
+      {
+        "q": "¿Aceptas cambios grandes?",
+        "a": "Solo en etapas tempranas. Cambios grandes después pueden tener costo extra."
+      },
+      {
+        "q": "¿Puedo usar el trabajo sin dar crédito?",
+        "a": "Sí, si pagaste los derechos totales. De lo contrario, se requiere crédito visible."
+      },
+      {
+        "q": "¿Qué pasa si no me gusta el resultado?",
+        "a": "Se incluyen revisiones para ajustar el trabajo. Si después de las revisiones no estás satisfecho, no se realizan reembolsos."
+      },
+      {
+        "q": "Si quiero hacer una comisión pero no tengo claro lo que quiero, ¿puedes ayudarme a definirlo?",
+        "a": "¡Claro! Estoy aquí para ayudarte a dar forma a tu idea. Podemos discutir tus necesidades y preferencias para encontrar la mejor opción para ti."
+      },
+      {
+        "q": "¿Puedo solicitar una comisión personalizada que no esté en los planes?",
+        "a": "Sí, si tienes una idea específica que no encaja en los planes estándar, contáctame y podemos discutir una comisión personalizada."
+      },
+      {
+        "q": "¿Qué métodos de pago aceptas?",
+        "a": "Actualmente, todos los pagos se manejan a través de Ko-fi, que acepta varias formas de pago como tarjetas de crédito y PayPal."
+      },
+      {
+        "q": "¿Qué plan debo elegir si quiero solicitar una canción para un proyecto de Friday Night Funkin'?",
+        "a": "Si es para una canción estándar (con vocales de los personajes) el plan \"Canción / OST\" es el que debes escoger. Si es para una canción de menú o derivado, el plan \"Música de fondo (BGM)\" puede ser suficiente, dependiendo de las necesidades específicas del proyecto."
+      },
+      {
+        "q": "¿Qué tipo de música puedes crear?",
+        "a": "Puedo crear varios estilos, desde música electrónica hasta orquestal. Si tienes un estilo específico en mente, no dudes en preguntarme y te pasaré ejemplos específicos del género deseado (Si he llegado a producirlo)."
+       },
+      {
+        "q": "¿Puedo solicitar una comisión para un proyecto que no sea un juego?",
+        "a": "¡Por supuesto! Aunque tengo experiencia con música para juegos, también puedo crear música para otros tipos de proyectos como videos, podcasts o cualquier otro uso que tengas en mente."
+      },
+      {
+        "q": "¿Puedo solicitar una comisión para un remix o cover de una canción existente?",
+        "a": "Sí, puedo trabajar en remixes o covers. Sin embargo, estos tienen que ser personales o de tu mismo proyecto, no trabajaré con canciones de terceros sin permiso."
+      },
+      {
+        "q": "En el plan \"Canción / OST\" el tiempo de entrega dice \"10+ días\", ¿Eso qué significa?",
+        "a": "Ese tiempo representa el tiempo estimado de entrega, que puede variar dependiendo de la complejidad del proyecto y mi carga de trabajo actual. En algunos casos, puede extenderse más allá de los 10 días."
+      }
+    ] 
+  },
+  
+  "back": "Volver a Comisiones",
+  "start": "Iniciar Comisión",
+  "contact": "Contactarme",
+  "cta": {
+    "title": "¿Listo para Comisionar?",
+    "description": "¿Tienes preguntas o estás listo para comenzar tu proyecto? ¡Contáctame!"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "title": "Lore",
+  "description": "Historias, personajes y el mundo que rodea mis proyectos.",
+  
+  "sections": {
+    "characters": {
+      "title": "Personajes",
+      "description": "Conoce a los protagonistas de este universo."
+    },
+    "mainStory": {
+      "title": "Historia Principal",
+      "description": "Descubre la narrativa central y las tramas principales."
+    },
+    "funFacts": {
+      "title": "Datos Curiosos",
+      "description": "Trivia interesante y detalles detrás de mi y mis proyectos.",
+      "facts": [
+        "alo",
+        "asd",
+        "coso"
+      ]
+    },
+    "songLore": {
+      "title": "Lore de Canciones",
+      "description": "Significados ocultos e historias detrás de mi música."
+    }
+  },
+  
+  "exploreTitle": "Explora mi Universo",
+  "viewCharacters": "Explorar personajes",
+  "featured": "Personajes destacados",
+  "story": "Historia principal",
+  "funfacts": "Datos curiosos",
+  "musicsecrets": "Secretos de mi música",
+  "explore": "Explorar sección"
+}

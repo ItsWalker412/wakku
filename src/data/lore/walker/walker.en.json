@@ -1,0 +1,75 @@
+{
+  "name": "Walker",
+  "role": "Sujeto Alfa",
+  "subtitle": "El superviviente de la Blue Energy",
+  "description": "Walker es uno de los pocos humanos que sobrevivieron a un experimento con Blue Energy. Su cuerpo y mente cambiaron para siempre.",
+  
+  "theme": {
+    "primary": "electricBlue",
+    "secondary": "cyan",
+    "accent": "indigo"
+  },
+  
+  "stats": {
+    "fuerza": "8/10",
+    "agilidad": "6/10",
+    "inteligencia": "7/10",
+    "resistencia": "9/10"
+  },
+  
+  "details": {
+    "clase": "Alpha",
+    "origen": "Proyecto Exuria",
+    "estado": "Activo",
+    "edad": "28 años",
+    "afiliación": "Independiente"
+  },
+  
+  "backButton": "Volver a Personajes",
+  
+  "labels": {
+    "mainCharacter": "Personaje Principal",
+    "keyStats": "Estadísticas Clave",
+    "history": "Historia",
+    "profileDetails": "Detalles del Perfil",
+    "fullBiography": "Biografía Completa",
+    "skillsCapabilities": "Habilidades y Capacidades",
+    "relationshipsConnections": "Relaciones y Conexiones",
+    "alliance": "Alianza",
+    "rivalry": "Rivalidad"
+  },
+  
+  "biography": [
+    "Walker fue seleccionado entre los primeros voluntarios para el Proyecto Exuria, una iniciativa destinada a explorar los límites del potencial humano mediante la Blue Energy.",
+    "Lo que comenzó como un experimento científico se convirtió en una prueba de resistencia extrema cuando el proceso de transformación mostró efectos secundarios inesperados.",
+    "Hoy, opera como un agente independiente, utilizando sus habilidades únicas para proteger a otros de los peligros de la energía que casi lo destruye."
+  ],
+  
+  "skills": [
+    {
+      "title": "Manipulación de Energía",
+      "description": "Puede canalizar y controlar Blue Energy para diversos efectos.",
+      "level": "Avanzado"
+    },
+    {
+      "title": "Regeneración Acelerada",
+      "description": "Curación mejorada y resistencia a daños físicos.",
+      "level": "Alto"
+    },
+    {
+      "title": "Percepción Mejorada",
+      "description": "Sentidos amplificados y detección de energías.",
+      "level": "Moderado"
+    },
+    {
+      "title": "Resistencia Física",
+      "description": "Capacidad sobrehumana para soportar estrés físico.",
+      "level": "Máximo"
+    }
+  ],
+  
+  "relationships": {
+    "alliance": "Mantiene una relación compleja con otros sujetos del Proyecto Exuria, actuando como mentor para aquellos que luchan con sus transformaciones.",
+    "rivalry": "En conflicto con las fuerzas que buscan explotar la Blue Energy para fines destructivos o de control."
+  }
+}

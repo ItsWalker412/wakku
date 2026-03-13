@@ -1,0 +1,33 @@
+{
+  "title": "Personajes",
+  "description": "Conoce a los personajes principales de mi universo.",
+  "ageLabel": "Edad",
+  "birthdayLabel": "Cumpleaños",
+  "typeLabel": "Tipo",
+  "viewDetails": "Ver detalles",
+  "backToLore": "Volver al Lore",
+  "charactersCount": "personajes principales",
+  "moreComing": "Más personajes próximamente",
+  "moreComingDesc": "El universo sigue expandiéndose con nuevos personajes e historias. Regresa pronto para descubrir más miembros del elenco.",
+  
+  "characters": [
+    {
+      "id": "lia",
+      "name": "A.M. Lia",
+      "type": "Androide",
+      "age": "Desconocida",
+      "birthday": "Desconocido",
+      "tagline": "Una compañera leal.",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "id": "walker",
+      "name": "Pejelagarto",
+      "type": "Beta",
+      "age": "23 años",
+      "birthday": "Desconocido",
+      "tagline": "Fragmento de un experimento fallido.",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    }
+  ]
+}

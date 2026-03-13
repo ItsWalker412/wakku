@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: 255 255 255; /* Blanco puro */
+  --foreground: 10 10 10; /* Negro suave */
+  --primary: 0 0 0; /* Negro para elementos principales */
+  --primary-foreground: 255 255 255; /* Blanco sobre negro */
+  --muted: 250 250 250; /* Gris muy claro */
+  --muted-foreground: 100 100 100; /* Gris medio */
+  --border: 230 230 230; /* Borde gris claro */
+  --accent: 20 180 200; /* Cyan suave para acentos */
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --color-background: rgb(var(--background));
+  --color-foreground: rgb(var(--foreground));
+  --color-primary: rgb(var(--primary));
+  --color-primary-foreground: rgb(var(--primary-foreground));
+  --color-muted: rgb(var(--muted));
+  --color-muted-foreground: rgb(var(--muted-foreground));
+  --color-border: rgb(var(--border));
+  --color-accent: rgb(var(--accent));
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) * 0.75);
+  --radius-sm: calc(var(--radius) * 0.5);
+  --font-sans: 'Poppins', system-ui, sans-serif;
+  --font-weight-normal: 500;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 11 13 18; /* Negro */
+    --foreground: 240 240 240; /* Blanco suave */
+    --primary: 240 240 240; /* Blanco para elementos principales */
+    --primary-foreground: 10 10 10; /* Negro sobre blanco */
+    --muted: 30 30 30; /* Gris oscuro */
+    --muted-foreground: 180 180 180; /* Gris claro */
+    --border: 50 50 50; /* Borde gris oscuro */
+    --accent: 40 200 220; /* Cyan más brillante en dark mode */
+  }
+}
+
+body {
+  background: rgb(var(--background));
+  color: rgb(var(--foreground));
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-normal);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Scrollbar estilizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--muted));
+  border-radius: var(--radius);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--accent));
+  border-radius: var(--radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--accent) / 0.8);
+}
+
+/* Selección de texto */
+::selection {
+  background-color: rgb(var(--accent));
+  color: rgb(var(--background));
+}
+
+/* Tipografía consistente */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+}
+
+/* Transiciones rápidas en toda la app */
+* {
+  transition-duration: 50ms !important;
+}
+
+/* Mejoras para móvil */
+@media (max-width: 768px) {
+  body {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Prevenir zoom en iOS */
+  input, textarea, select {
+    font-size: 16px;
+  }
+}
+
+/* Preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 100ms !important;
+    transition-duration: 100ms !important;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/* Opcional: solo eliminar subrayado en hover si quieres mantener algún efecto */
+a:hover {
+  text-decoration: none !important;
+}
+
+/* Si usas la clase 'transition-link' específicamente */
+.transition-link,
+.transition-link:hover {
+  text-decoration: none !important;
+}

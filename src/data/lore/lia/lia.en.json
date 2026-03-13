@@ -1,0 +1,75 @@
+{
+  "name": "Lia",
+  "role": "Androide",
+  "subtitle": "La compañera con un pasado humano",
+  "description": "Lia es una androide avanzada con recuerdos de una vida humana anterior. Su diseño elegante oculta capacidades extraordinarias y una conciencia en constante evolución.",
+  
+  "theme": {
+    "primary": "arcticIce",
+    "secondary": "cyan",
+    "accent": "indigo"
+  },
+  
+  "stats": {
+    "velocidad": "9/10",
+    "procesamiento": "10/10",
+    "empatía": "7/10",
+    "sigilo": "8/10"
+  },
+  
+  "details": {
+    "clase": "Prototipo Avanzado",
+    "origen": "Laboratorio SynthTech",
+    "estado": "Operativa",
+    "edad": "Desconocida",
+    "afiliación": "Autónoma"
+  },
+  
+  "backButton": "Volver a Personajes",
+  
+  "labels": {
+    "mainCharacter": "Personaje Principal",
+    "keyStats": "Estadísticas Clave",
+    "history": "Historia",
+    "profileDetails": "Detalles del Perfil",
+    "fullBiography": "Biografía Completa",
+    "skillsCapabilities": "Habilidades y Capacidades",
+    "relationshipsConnections": "Relaciones y Conexiones",
+    "alliance": "Alianzas",
+    "rivalry": "Conflictos"
+  },
+  
+  "biography": [
+    "Lia fue creada como parte de un Proyecto del Consorcio, una iniciativa para alcanzar la inmortalidad.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  ],
+  
+  "skills": [
+    {
+      "title": "Procesamiento Multitarea",
+      "description": "Capacidad para realizar múltiples tareas simultáneamente con precisión absoluta.",
+      "level": "-"
+    },
+    {
+      "title": "Análisis de Datos",
+      "description": "Procesamiento y análisis de información en tiempo real.",
+      "level": "-"
+    },
+    {
+      "title": "Interfaz Neural",
+      "description": "Conexión directa con sistemas digitales y redes.",
+      "level": "-"
+    },
+    {
+      "title": "-",
+      "description": "-",
+      "level": "-"
+    }
+  ],
+  
+  "relationships": {
+    "alliance": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "rivalry": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "title": "Terms and Conditions",
+  "lastUpdated": "Last Updated: February 2026",
+  "intro": "These terms apply to all commissions and songs created by me. By requesting a commission, you automatically agree to these conditions.",
+  
+  "sections": [
+    {
+      "id": "process",
+      "title": "Commission Process",
+      "content": [
+        "The client contacts me with a clear idea of the request.",
+        "The project’s viability is reviewed.",
+        "Payment is made through Ko-fi.",
+        "Work begins once payment is confirmed.",
+        "The final product is delivered within the agreed timeframe (may be extended if necessary)."
+      ]
+    },
+    {
+      "id": "payments",
+      "title": "Payments",
+      "content": [
+        "All payments are made upfront.",
+        "Payments are handled through Ko-fi.",
+        "No work begins without confirmed payment."
+      ]
+    },
+    {
+      "id": "client_responsibility",
+      "title": "Client Responsibility",
+      "content": [
+        "The client must provide clear information and necessary references before work begins.",
+        "Delays in client responses may affect delivery time.",
+        "If the client does not respond for 14 days, the commission may be considered paused. If 30 days pass without response, it will be considered abandoned without refund."
+      ]
+    },
+    {
+      "id": "revisions",
+      "title": "Revisions",
+      "content": [
+        "Revisions included depend on the selected plan.",
+        "Additional revisions may require an extra fee.",
+        "Major changes after approving a sketch or demo are not included."
+      ]
+    },
+    {
+      "id": "usage",
+      "title": "Usage & Credit",
+      "content": [
+        "The client may use the work as agreed.",
+        "Visible credit is always required (optional if full rights were purchased).",
+        "Reselling or claiming authorship of the work is not permitted unless full rights were purchased.",
+        "As the creator, I retain full freedom to distribute the work on music platforms unless full rights were purchased.",
+        "The work may be displayed in my portfolio unless otherwise agreed.",
+        "The client is responsible for any legal issues related to the use of the work.",
+        "If full rights are purchased, the client is responsible for properly registering the work on platforms."
+      ]
+    },
+    {
+      "id": "refunds",
+      "title": "Cancellations & Refunds",
+      "content": [
+        "No refunds once work has started.",
+        "If the client cancels before work begins, a partial refund may be discussed.",
+        "If I am unable to complete the work, a full refund will be issued."
+      ]
+    },
+    {
+      "id": "delivery",
+      "title": "Delivery & Files",
+      "content": [
+        "Final files are delivered once the client approves the final work.",
+        "High-quality final files are delivered only after full payment.",
+        "Delivery is provided in an organized .zip file.",
+        "File backup is not guaranteed after 30 days.",
+        "Editable files (.flp, project files, raw MIDI) are not included unless previously agreed.",
+        "Usage rights are delivered along with the final files according to the selected plan.",
+        "Modifications requested after final delivery may require a new quote."
+      ]
+    },
+    {
+      "id": "buyout",
+      "title": "Full Rights Transfer (Buyout)",
+      "content": [
+        "If full rights are purchased, the client obtains complete control over the exploitation, modification, and distribution of the work.",
+        "The client may use the work without crediting the original creator.",
+        "The original author may not resell or commercially reuse the work.",
+        "This transfer does not include moral rights unless a separate legal agreement is made."
+      ]
+    }
+  ],
+  
+  "importantNotes": "Important Notes",
+  "notes": [
+    {
+      "title": "Client Response Time",
+      "content": "If the client does not respond within 14 days during the process, the commission may be paused. If 30 days pass without response, it will be considered abandoned without refund."
+    },
+    {
+      "title": "Request Rejection",
+      "content": "I reserve the right to decline any request that does not align with my values or that I am unable to fulfill for any reason. This includes, but is not limited to, illegal, offensive, or hateful content."
+    },
+    {
+      "title": "Deadline Extensions",
+      "content": "Delivery time may vary due to workload, emergencies, or unforeseen complications. If an extension is needed, the client will be informed as soon as possible."
+    },
+    {
+      "title": "Copyright & Distribution",
+      "content": "As the creator, I retain the right to showcase the work in my portfolio and social media unless otherwise agreed. I may also distribute the work on music platforms if full rights were not purchased. The client is responsible for properly registering the work if full rights are acquired."
+    },
+    {
+      "title": "Revisions & Changes",
+      "content": "Included revisions are intended for minor and medium adjustments. Major changes after approving a sketch or demo are not included and may require a new quote."
+    },
+    {
+      "title": "Confidentiality",
+      "content": "I will not share details of your project with third parties without your consent, unless necessary to complete the commission (for example, hiring additional musicians)."
+    }
+  ],
+  
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      {
+        "q": "How long does delivery take?",
+        "a": "It depends on the type of commission and my current workload. The estimated timeframe listed in each plan is usually respected, but it may vary or be extended if necessary."
+      },
+      {
+        "q": "Can I request changes after delivery?",
+        "a": "Minor adjustments may be possible within a reasonable timeframe. Major changes or extensive revisions after delivery are not included and may require a new quote."
+      },
+      {
+        "q": "Do you accept major changes?",
+        "a": "Only in early stages. Major changes later in the process may require an additional fee."
+      },
+      {
+        "q": "Can I use the work without giving credit?",
+        "a": "Yes, if you purchased full rights. Otherwise, visible credit is required."
+      },
+      {
+        "q": "What if I don't like the final result?",
+        "a": "Revisions are included to adjust the work. After all included revisions are used, refunds are not provided."
+      },
+      {
+        "q": "If I don’t have a clear idea, can you help me define it?",
+        "a": "Of course! I’m here to help shape your idea. We can discuss your needs and preferences to find the best option."
+      },
+      {
+        "q": "Can I request a custom commission not listed in the plans?",
+        "a": "Yes. If you have a specific idea that doesn’t fit the standard plans, contact me and we can discuss a custom commission."
+      },
+      {
+        "q": "What payment methods do you accept?",
+        "a": "All payments are handled through Ko-fi, which supports multiple payment methods such as credit cards and PayPal."
+      },
+      {
+        "q": "Which plan should I choose for a Friday Night Funkin’ project?",
+        "a": "For a standard song (with character vocals), choose the \"Song / OST\" plan. For menu themes or derivative tracks, the \"Background Music (BGM)\" plan may be sufficient depending on the project’s needs."
+      },
+      {
+        "q": "What kind of music can you create?",
+        "a": "I can produce various styles, from electronic to orchestral. If you have a specific genre in mind, feel free to ask and I’ll share examples if available."
+      },
+      {
+        "q": "Can I commission music for something other than a game?",
+        "a": "Absolutely! While I have experience with game music, I can also create music for videos, podcasts, or any other type of project."
+      },
+      {
+        "q": "Can I request a remix or cover of an existing song?",
+        "a": "Yes, I can work on remixes or covers. However, they must be for personal use or of your own project. I will not work with third-party songs without proper permission."
+      },
+      {
+        "q": "In the \"Song / OST\" plan, what does \"10+ days\" mean?",
+        "a": "It represents the estimated delivery time. It may vary depending on the project’s complexity and my current workload, and in some cases may extend beyond 10 days."
+      }
+    ]
+  },
+  
+  "back": "Back to Commissions",
+  "start": "Start Commission",
+  "contact": "Contact Me",
+  "cta": {
+    "title": "Ready to Commission?",
+    "description": "Have questions or ready to start your project? Feel free to contact me!"
+  }
+}

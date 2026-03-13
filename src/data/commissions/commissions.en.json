@@ -1,0 +1,129 @@
+{
+  "title": "Commissions",
+  "description": "Professional custom music commissions. Each piece is created with attention to detail and care.",
+  
+  "recommended": "Recommended",
+  
+  "comparison": {
+    "features": [
+      "Price",
+      "Delivery Time",
+      "Revisions",
+      "Commercial Use",
+      "Included Formats",
+      "Stems",
+      "Rights",
+      "Maximum Length",
+      "Best For"
+    ],
+    "items": [
+      {
+        "title": "Song / OST",
+        "recommended": true,
+        "values": [
+          "$20 USD",
+          "10+ days",
+          "8 included",
+          "Included",
+          "MP3, OGG, WAV",
+          "+$10 USD for stems",
+          "+200% for full rights",
+          "2 minutes (+30s = +$6 USD)",
+          "Main themes, FNF, etc."
+        ]
+      },
+      {
+        "title": "Background Music (BGM)",
+        "recommended": false,
+        "values": [
+          "$16 USD",
+          "3–12 days",
+          "5 included",
+          "Included",
+          "MP3, OGG, WAV",
+          "+$4 USD for stems",
+          "+150% for full rights",
+          "1:30 minutes (+30s = +$2 USD)",
+          "Videos, games, streams, etc."
+        ]
+      },
+      {
+        "title": "Intro / Jingle",
+        "recommended": false,
+        "values": [
+          "$12 USD",
+          "3–8 days",
+          "3 included",
+          "Included",
+          "MP3, WAV",
+          "Not available",
+          "+100% for full rights",
+          "30 seconds",
+          "Intros, outros, bumpers"
+        ]
+      },
+      {
+        "title": "Song Mastering",
+        "recommended": false,
+        "values": [
+          "$10 USD",
+          "1–4 days",
+          "3 included",
+          "Included",
+          "OGG, WAV",
+          "Not applicable",
+          "+50% for full rights",
+          "Not applicable",
+          "Unmastered songs"
+        ]
+      }
+    ]
+  },
+  
+  "optionsTitle": "Commission Options",
+  "howItWorks": "How It Works",
+  "processSteps": [
+    {
+      "title": "Contact",
+      "description": "Share your idea and requirements, and we’ll find the best option for you."
+    },
+    {
+      "title": "Payment",
+      "description": "Payment is made through Ko-fi to begin the process."
+    },
+    {
+      "title": "Create",
+      "description": "Sketching, refinement, and finalization."
+    },
+    {
+      "title": "Delivery",
+      "description": "You receive the final files in a .zip along with usage rights."
+    }
+  ],
+  
+  "termsPreview": {
+    "title": "Terms and Conditions",
+    "description": "Before requesting a commission, please review the terms.",
+    "items": [
+      "I reserve the right to decline any request that does not align with my values or that I cannot fulfill.",
+      "No refunds once work has started.",
+      "Delivery time may vary.",
+      "Credit is required when using the work unless full rights were purchased.",
+      "The client is responsible for any legal issues related to the use of the work."
+    ],
+    "link": "Read Full Terms"
+  },
+  
+  "waitlist": {
+    "title": "Waitlist",
+    "status": "OPEN",
+    "note": "By continuing, you agree to the Terms and Conditions.",
+    "button": "Go to Ko-fi"
+  },
+  
+  "cta": {
+    "title": "Ready to bring your vision to life?",
+    "description": "Commissions are currently open. Feel free to contact me if you have any questions!",
+    "askButton": "Ask a Question"
+  }
+}

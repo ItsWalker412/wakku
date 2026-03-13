@@ -1,0 +1,123 @@
+{
+  "title": "Comisiones",
+  "description": "Encargos profesionales de temas musicales. Cada pieza es creada con atención al detalle y cuidado.",
+  
+  "recommended": "Recomendada",
+  
+  "comparison": {
+    "features": [
+      "Precio",
+      "Tiempo de entrega",
+      "Revisiones",
+      "Uso comercial",
+      "Formatos incluidos",
+      "Stems",
+      "Derechos",
+      "Duración máxima",
+      "Recomendada para"
+    ],
+    "items": [
+        {
+        "title": "Canción / OST",
+        "recommended": true,
+        "values": [
+        "$20 USD",
+        "10+ días",
+        "8 incluidas",
+        "Incluido",
+        "MP3, OGG, WAV",
+        "+$10 USD por stems",
+        "+200% por derechos totales",
+        "2 minutos (+30s = +$6 USD)",
+        "Temas principales, FNF, etc."
+        ]},
+      {"title":"Música de fondo (BGM)",
+       "recommended": false,
+       "values": [
+         "$16 USD",
+         "3–12 días",
+         "5 incluidas",
+         "Incluido",
+         "MP3, OGG, WAV",
+         "+$4 USD por stems",
+          "+150% por derechos totales",
+          "1:30 minutos (+30s = +$2 USD)",
+          "Videos, juegos, streams, etc."
+       ]},
+      {"title":"Intro / Jingle",
+       "recommended": false,
+       "values": [
+         "$12 USD",
+         "3–8 días",
+         "3 incluidas",
+         "Incluido",
+         "MP3, WAV",
+         "No",
+         "+100% por derechos totales",
+         "30 segundos",
+         "Intros, outros, cortinillas"
+       ]},
+      {
+        "title": "Masterización de tu canción",
+        "recommended": false,
+        "values": [
+          "$10 USD",
+          "1-4 días",
+          "3 incluidas",
+          "Incluido",
+          "OGG, WAV",
+          "No aplica",
+          "+50% por derechos totales",
+          "No aplica",
+          "Canciones sin master"
+        ]}
+    ]
+  },
+  
+  "optionsTitle": "Opciones de Comisión",
+  "howItWorks": "Cómo Funciona",
+  "processSteps": [
+    {
+      "title": "Contactar",
+      "description": "Comunica tu idea y requisitos y vemos la opción que se adapte mejor a ti"
+    },
+    {
+      "title": "Pago",
+      "description": "Se hace el pago a través de Ko-fi para iniciar el proceso"
+    },
+    {
+      "title": "Crear",
+      "description": "Esbozo, refinamiento y finalización"
+    },
+    {
+      "title": "Entregar",
+      "description": "Recibes los archivos finales en un zip y los derechos de uso"
+    }
+  ],
+  
+  "termsPreview": {
+    "title": "Términos y Condiciones",
+    "description": "Antes de solicitar una comisión, por favor revisa los términos.",
+    "items": [
+      "Estoy en mi derecho de rechazar cualquier solicitud que no se ajuste a mis valores o que no pueda cumplir",
+      "No hay reembolsos una vez iniciado el trabajo",
+      "El tiempo de entrega puede variar",
+      "Créditos obligatorios al usar el trabajo si no se pagaron los derechos totales",
+      "El cliente es responsable de cualquier problema legal relacionado con el uso del trabajo"
+    ],
+    "link": "Leer términos completos"
+  },
+  
+  "waitlist": {
+    "title": "Waitlist",
+    "status": "OPEN",
+    "note": "Al continuar, aceptas los Términos y Condiciones.",
+    "button": "Ir a Ko-fi"
+  },
+  
+  "cta": {
+    "title": "¿Listo para dar vida a tu visión?",
+    "description": "Las comisiones están actualmente abiertas. ¡No dudes en contactarme si tienes preguntas!",
+    "askButton": "Hacer una Pregunta"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "title": "Contact",
+  "description": "Connect with me through my social media and platforms. Let’s talk about projects, collaborations, or just have a chat!",
+  
+  "socials": {
+    "youtube": {
+      "title": "YouTube",
+      "description": "Music content, releases, tutorials, and more.",
+      "cta": "Subscribe"
+    },
+    "discord": {
+      "title": "Discord",
+      "description": "Join my community to chat and receive updates.",
+      "cta": "Join"
+    },
+    "twitter": {
+      "title": "X (Twitter)",
+      "description": "Random content and quick updates.",
+      "cta": "Follow"
+    },
+    "instagram": {
+      "title": "Instagram",
+      "description": "Visual content, updates, and more personal moments.",
+      "cta": "Follow"
+    },
+    "tiktok": {
+      "title": "TikTok",
+      "description": "Short and entertaining content.",
+      "cta": "Follow"
+    },
+    "spotify": {
+      "title": "Spotify",
+      "description": "Listen to my music and playlists.",
+      "cta": "Listen"
+    }
+  },
+  
+  "contactForm": {
+    "title": "Let’s Work Together!",
+    "description": "For professional inquiries, collaborations, or commissions.",
+    "email": "wkacontacto@gmail.com",
+    "emailButton": "Send Email",
+    "note": "I usually respond within 24–48 hours.",
+    "emailLabel": "Direct Email"
+  },
+  
+  "featuredContent": {
+    "title": "Featured Content",
+    "items": [
+      {
+        "platform": "YouTube",
+        "content": "New video: 'Important announcement.'",
+        "link": "https://youtube.com/watch?v=4EesYC9HI6Q"
+      },
+      {
+        "platform": "Spotify",
+        "content": "Album: 'WBNSxFNF (Vol. 1)'",
+        "link": "https://open.spotify.com/intl-es/album/6wncBjOeLTsvSSJtwuP12o?si=2j_EeSWiTA2PViW4aBkOmg"
+      },
+      {
+        "platform": "Instagram",
+        "content": "Post: 'Europlush remix'",
+        "link": "https://www.instagram.com/p/DPP7O0ECFp9/"
+      }
+    ]
+  },
+  
+  "labels": {
+    "connectWithMe": "Connect With Me",
+    "professionalInquiries": "Professional Inquiries",
+    "activeNow": "Active Now",
+    "finalNoteTitle": "Thanks for Visiting!",
+    "finalNoteMessage": "Let’s connect everywhere",
+    "finalNoteDescription": "Feel free to reach out on any platform. Whether it’s to collaborate, talk about music, art, or just say hi, I’m always happy to connect!"
+  }
+}

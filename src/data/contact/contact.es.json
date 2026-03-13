@@ -1,0 +1,76 @@
+{
+  "title": "Contacto",
+  "description": "Conéctate conmigo a través de mis redes sociales y plataformas. ¡Hablemos sobre proyectos, colaboraciones o simplemente charlemos!",
+  
+  "socials": {
+    "youtube": {
+      "title": "YouTube",
+      "description": "Contenido musical, lanzamientos, tutoriales y más.",
+      "cta": "Suscríbete"
+    },
+    "discord": {
+      "title": "Discord",
+      "description": "Únete a mi comunidad para charlar y recibir actualizaciones.",
+      "cta": "Unirse"
+    },
+    "twitter": {
+      "title": "X (Twitter)",
+      "description": "Contenido aleatorio y actualizaciones rápidas.",
+      "cta": "Seguir"
+    },
+    "instagram": {
+      "title": "Instagram",
+      "description": "Contenido visual, actualizaciones y momentos más personales.",
+      "cta": "Seguir"
+    },
+    "tiktok": {
+      "title": "TikTok",
+      "description": "Contenido corto y entretenido.",
+      "cta": "Seguir"
+    },
+    "spotify": {
+      "title": "Spotify",
+      "description": "Escucha mi música y playlists.",
+      "cta": "Escuchar"
+    }
+  },
+  
+  "contactForm": {
+    "title": "¿Trabajemos juntos?",
+    "description": "Para consultas profesionales, colaboraciones o comisiones.",
+    "email": "wkacontacto@gmail.com",
+    "emailButton": "Enviar Email",
+    "note": "Respondo generalmente en 24-48 horas.",
+    "emailLabel": "Email directo"
+  },
+  
+  "featuredContent": {
+    "title": "Contenido Destacado",
+    "items": [
+      {
+        "platform": "YouTube",
+        "content": "Nuevo video: 'Important announcement.'",
+        "link": "https://youtube.com/watch?v=4EesYC9HI6Q"
+      },
+      {
+        "platform": "Spotify",
+        "content": "Album: 'WBNSxFNF (Vol. 1)'",
+        "link": "https://open.spotify.com/intl-es/album/6wncBjOeLTsvSSJtwuP12o?si=2j_EeSWiTA2PViW4aBkOmg"
+      },
+      {
+        "platform": "Instagram",
+        "content": "Post: 'Europlush remix'",
+        "link": "https://www.instagram.com/p/DPP7O0ECFp9/"
+      }
+    ]
+  },
+  
+  "labels": {
+    "connectWithMe": "Conéctate Conmigo",
+    "professionalInquiries": "Consultas Profesionales",
+    "activeNow": "Activo ahora",
+    "finalNoteTitle": "¡Gracias por visitar!",
+    "finalNoteMessage": "Conectemos en todas partes",
+    "finalNoteDescription": "No dudes en contactarme en cualquier plataforma. Ya sea para colaborar, hablar de música, arte o simplemente para saludar, ¡siempre estoy feliz de conectar!"
+  }
+}
