@@ -26,7 +26,7 @@ export default async function RootLayout({ children, params }: Props) {
   }
 
   const navbarDict = await getDictionary(lang as Locale, "navbar") as any;
-
+<Analytics />
   return (
     <html lang={lang}>
       <head>
