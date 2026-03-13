@@ -6,6 +6,7 @@ import { getDictionary } from "@/i18n/get-dictionary";
 import { Navbar } from "@/components/navbar/Navbar";
 import { PageTransition } from "@/components/PageTransition";
 import { TransitionController } from "@/components/TransitionController";
+import { Analytics } from "@vercel/analytics/next"
 export const metadata: Metadata = {
   title: "wakku",
   description: "The official website of wakku, an independent music producer.",
@@ -40,6 +41,7 @@ export default async function RootLayout({ children, params }: Props) {
         </PageTransition>
         <TransitionController />
       </body>
+      <Analytics />
     </html>
   );
 }
