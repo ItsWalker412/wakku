@@ -248,7 +248,7 @@ export default async function CommissionsPage({ params }: Props) {
             
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
               <a
-                href="https://ko-fi.com/wakku_wav"
+                href="https://ko-fi.com/wakku_wav/commissions"
                 target="_blank"
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-foreground to-foreground/90 px-6 py-3 font-semibold text-background shadow-md transition-all duration-300 hover:scale-105 hover:from-accent hover:to-accent/90"
               >
