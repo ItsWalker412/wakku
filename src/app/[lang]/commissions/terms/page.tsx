@@ -180,7 +180,7 @@ export default async function TermsPage({ params }: Props) {
               </Link>
               
               <a
-                href="https://ko-fi.com/wakku_wav"
+                href="https://ko-fi.com/wakku_wav/commissions"
                 target="_blank"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background px-6 py-3 font-semibold transition-all duration-300 hover:border-accent hover:bg-accent/10"
               >
