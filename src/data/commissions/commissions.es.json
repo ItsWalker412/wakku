@@ -110,7 +110,7 @@
   
   "waitlist": {
     "title": "Waitlist",
-    "status": "OPEN",
+    "status": "CERRADA",
     "note": "Al continuar, aceptas los Términos y Condiciones.",
     "button": "Ir a Ko-fi"
   },

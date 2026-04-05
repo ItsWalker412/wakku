@@ -116,7 +116,7 @@
   
   "waitlist": {
     "title": "Waitlist",
-    "status": "OPEN",
+    "status": "CLOSED",
     "note": "By continuing, you agree to the Terms and Conditions.",
     "button": "Go to Ko-fi"
   },

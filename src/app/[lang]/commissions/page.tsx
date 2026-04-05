@@ -43,9 +43,9 @@ export default async function CommissionsPage({ params }: Props) {
             </p>
             
             {/* Status Badge */}
-            <div className="inline-flex items-center gap-2 rounded-full bg-green-500/20 px-4 py-2">
-              <div className="h-2 w-2 animate-pulse rounded-full bg-green-500"></div>
-              <span className="font-medium text-green-400">
+            <div className="inline-flex items-center gap-2 rounded-full bg-red-500/20 px-4 py-2">
+              <div className="h-2 w-2 animate-pulse rounded-full bg-red-500"></div>
+              <span className="font-medium text-red-400">
                 {dict.waitlist.title}: <span className="font-bold">{dict.waitlist.status}</span>
               </span>
             </div>
@@ -232,7 +232,7 @@ export default async function CommissionsPage({ params }: Props) {
         <div className="rounded-2xl border border-border/50 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 p-6 shadow-sm sm:rounded-3xl sm:p-8 md:p-10 lg:p-12">
           <div className="mx-auto max-w-2xl text-center">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-accent/20 px-4 py-2">
-              <div className="h-2 w-2 animate-pulse rounded-full bg-green-500"></div>
+              <div className="h-2 w-2 animate-pulse rounded-full bg-red-500"></div>
               <span className="text-sm font-medium">
                 {dict.waitlist.title}
               </span>
