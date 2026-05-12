@@ -1,0 +1,194 @@
+// Navbar.tsx
+"use client";
+
+import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { TransitionLink } from "@/components/TransitionLink";
+import type { Locale } from "@/i18n/config";
+
+type NavLink = {
+  href: string;
+  label: string;
+  icon: string;
+  children?: NavLink[];
+};
+
+type Props = {
+  lang: Locale;
+  dict: {
+    about: string;
+    commissions: string;
+    contact: string;
+    lore: string;
+    music: string;
+  };
+};
+
+const SIDEBAR_W = "200px";
+
+export function Navbar({ lang, dict }: Props) {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  const navLinks: NavLink[] = [
+    { href: `/${lang}/about`, label: dict.about, icon: "✦" },
+    { href: `/${lang}/commissions`, label: dict.commissions, icon: "✧" },
+    { href: `/${lang}/music`, label: dict.music, icon: "♩" },
+    { href: `/${lang}/contact`, label: dict.contact, icon: "◌" },
+  ];
+
+  // Cerrar al hacer clic fuera
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setMobileOpen(false);
+        setActiveDropdown(null);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
+  // Bloquear scroll cuando el menú móvil está abierto
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
+  const closeMenu = () => {
+    setMobileOpen(false);
+    setActiveDropdown(null);
+  };
+
+  return (
+    <>
+      {/* SIDEBAR ESCRITORIO */}
+      <aside
+        className="hidden md:flex fixed inset-y-0 left-0 z-50 flex-col overflow-y-auto"
+        style={{
+          width: SIDEBAR_W,
+          padding: "28px 16px 24px",
+          backgroundColor: "#0a0c15",
+          borderRight: "1px solid rgba(127,192,223,0.15)",
+        }}
+      >
+        <div className="relative flex flex-col items-center gap-4 mb-8">
+          <TransitionLink href={`/${lang}`} onClick={closeMenu} className="group">
+            <div className="relative h-12 w-20 mx-auto">
+              <Image
+                src="/images/w-logo.svg"
+                alt="wakku"
+                fill
+                className="object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                priority
+                sizes="80px"
+              />
+            </div>
+          </TransitionLink>
+        </div>
+
+        <nav className="relative flex flex-col gap-1 flex-1">
+          {navLinks.map((link) =>
+            link.children ? (
+              <div key={link.label}>
+                <button
+                  onClick={() => setActiveDropdown((p) => (p === link.label ? null : link.label))}
+                  className="w-full flex items-center justify-between px-4 py-3 rounded-2xl text-left text-sm font-semibold tracking-wide transition-all duration-200 text-sky-300/70 hover:text-sky-200 hover:bg-sky-300/10"
+                >
+                  <span className="flex items-center gap-3">
+                    <span className="text-xs opacity-60">{link.icon}</span>
+                    {link.label}
+                  </span>
+                  <ChevronDown className={`h-3.5 w-3.5 opacity-50 transition-transform duration-200 ${activeDropdown === link.label ? "rotate-180" : ""}`} />
+                </button>
+                {activeDropdown === link.label && (
+                  <div className="ml-4 pl-3 border-l border-sky-300/15 flex flex-col gap-0.5 mt-0.5 mb-1">
+                    {link.children.map((child) => (
+                      <TransitionLink
+                        key={child.href}
+                        href={child.href}
+                        onClick={closeMenu}
+                        className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-medium text-sky-400/60 hover:text-sky-200/80 hover:bg-sky-300/10 transition-all duration-150"
+                      >
+                        <span className="opacity-60">{child.icon}</span>
+                        {child.label}
+                      </TransitionLink>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <TransitionLink
+                key={link.href}
+                href={link.href}
+                onClick={closeMenu}
+                className="flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-semibold tracking-wide text-sky-300/70 hover:text-sky-200 hover:bg-sky-300/10 transition-all duration-200"
+              >
+                <span className="text-xs opacity-60">{link.icon}</span>
+                {link.label}
+              </TransitionLink>
+            )
+          )}
+        </nav>
+
+        <div className="relative mt-6 pt-5 flex justify-center border-t border-sky-300/10">
+          <LanguageSwitcher currentLang={lang} />
+        </div>
+      </aside>
+
+      {/* CABECERA MÓVIL */}
+      <header
+        ref={menuRef}
+        className="md:hidden fixed top-0 inset-x-0 z-50"
+        style={{
+          backgroundColor: "#0a0c15",
+          borderBottom: "1px solid rgba(127,192,223,0.15)",
+        }}
+      >
+        <div className="flex items-center justify-between px-4 py-3">
+          <TransitionLink href={`/${lang}`} onClick={closeMenu}>
+            <div className="relative h-8 w-14">
+              <Image src="/images/w-logo.svg" alt="wakku" fill className="object-contain opacity-80" priority sizes="56px" />
+            </div>
+          </TransitionLink>
+          <div className="flex items-center gap-2">
+            <LanguageSwitcher currentLang={lang} />
+            <button
+              onClick={() => setMobileOpen((o) => !o)}
+              className="p-2 rounded-xl text-sky-300/70 hover:text-sky-200 hover:bg-sky-300/10 transition-all duration-150"
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
+        </div>
+
+        <div
+          className={`overflow-hidden transition-all duration-300 ease-out ${
+            mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+          style={{ borderTop: mobileOpen ? "1px solid rgba(127,192,223,0.1)" : "none" }}
+        >
+          <nav className="px-4 py-3 flex flex-col gap-1">
+            {navLinks.map((link) => (
+              <TransitionLink
+                key={link.href}
+                href={link.href}
+                onClick={closeMenu}
+                className="flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-semibold text-sky-300/70 hover:text-sky-200 hover:bg-sky-300/10 transition-all duration-150"
+              >
+                <span className="text-xs opacity-60">{link.icon}</span>
+                {link.label}
+              </TransitionLink>
+            ))}
+          </nav>
+        </div>
+      </header>
+    </>
+  );
+}

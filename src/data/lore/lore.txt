@@ -1,0 +1,44 @@
+{
+  "title": "wakku cosas",
+  "description": "Cosas acerca de mí, personas, personajes y el mundo que rodea mis proyectos.",
+  
+  "sections": {
+    "credits": {
+      "title": "Créditos",
+      "description": "Personas y colaboradores que hacen posible este proyecto.",
+      "icon": "Heart",
+      "iconBg": "bg-indigo-500/20",
+      "iconColor": "text-indigo-500"
+    },
+    "characters": {
+      "title": "Personajes",
+      "description": "Conoce a mis personajes.",
+      "icon": "Users",
+      "iconBg": "bg-blue-500/20",
+      "iconColor": "text-blue-500"
+    },
+    "q&a": {
+      "title": "Preguntas Frecuentes",
+      "description": "Respuestas a las dudas más comunes sobre mi.",
+      "icon": "HelpCircle",
+      "iconBg": "bg-cyan-500/20",
+      "iconColor": "text-cyan-500"
+    },
+    "songLore": {
+      "title": "Lore de Canciones",
+      "description": "Significados ocultos e historias detrás de mi música.",
+      "icon": "Music",
+      "iconBg": "bg-purple-500/20",
+      "iconColor": "text-purple-500"
+    }
+  },
+  
+  "exploreTitle": "Universo de wakku",
+  "viewCharacters": "Explorar personajes",
+  "featured": "Personajes destacados",
+  "story": "Historia principal",
+  "funfacts": "Datos curiosos",
+  "musicsecrets": "Secretos de mi música",
+  "explore": "Explorar sección",
+  "credits": "Ver créditos"
+}

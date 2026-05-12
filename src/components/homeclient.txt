@@ -1,0 +1,375 @@
+"use client";
+
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect, useRef, useCallback } from "react";
+import Image from "next/image";
+import { TransitionLink } from "./TransitionLink";
+import {
+  SiYoutube,
+  SiInstagram,
+  SiX,
+  SiTiktok,
+  SiSpotify,
+  SiDiscord,
+} from "react-icons/si";
+
+// Announcements are now defined in home.es.json → home.items
+// and passed via Props. The array below is removed.
+
+type Announcement = {
+  id: string;
+  active: boolean;
+  type: "text" | "image" | "video";
+  label: string;
+  title: string;
+  body: string;
+  accent: string;
+  imageUrl?: string;
+  videoUrl?: string;
+};
+
+const SIDEBAR_W = 200;
+
+interface Props {
+  lang: string;
+  // home shape: { hero, cta, loading, announcements: { label, aria }, items: Announcement[] }
+  home: any;
+}
+
+const SOCIALS = [
+  { key: "youtube", Icon: SiYoutube, href: "https://youtube.com/@wakku_wav", hoverClass: "hover:text-red-400 hover:border-red-400/30 hover:bg-red-400/10" },
+  { key: "instagram", Icon: SiInstagram, href: "https://instagram.com/wakku.wav", hoverClass: "hover:text-pink-400 hover:border-pink-400/30 hover:bg-pink-400/10" },
+  { key: "twitter", Icon: SiX, href: "https://twitter.com/wakku_wav", hoverClass: "hover:text-sky-200 hover:border-sky-200/30 hover:bg-sky-200/10" },
+  { key: "tiktok", Icon: SiTiktok, href: "https://tiktok.com/@wakku.wav", hoverClass: "hover:text-teal-300 hover:border-teal-300/30 hover:bg-teal-300/10" },
+  { key: "spotify", Icon: SiSpotify, href: "https://open.spotify.com/artist/5cE4qiYMGef6P5jyuqNx5O?si=hJvz9zO9Tc-jVTjhXhIrKg", hoverClass: "hover:text-green-400 hover:border-green-400/30 hover:bg-green-400/10" },
+  { key: "discord", Icon: SiDiscord, href: "https://discord.gg/H7hK4GzyZD", hoverClass: "hover:text-indigo-300 hover:border-indigo-300/30 hover:bg-indigo-300/10" },
+];
+
+// ─── CAMBIO 1: imagen con altura fija en px (no h-32/h-40 de Tailwind)
+// Esto hace que el ghost container siempre tenga dimensiones estables
+// antes y después de que la imagen cargue, evitando saltos de layout.
+function AnnouncementCard({ ann }: { ann: Announcement }) {
+  return (
+    <div className="flex flex-col gap-2 lg:gap-3">
+      <div className="flex items-center gap-2">
+        <span
+          className="text-[9px] font-bold tracking-[0.18em] px-2 py-0.5 rounded-full border"
+          style={{
+            color: ann.accent,
+            borderColor: `${ann.accent}40`,
+            background: `${ann.accent}14`,
+          }}
+        >
+          {ann.label}
+        </span>
+        <span className="text-[9px] uppercase tracking-widest" style={{ color: `${ann.accent}50` }}>
+          {ann.type}
+        </span>
+      </div>
+
+      {ann.type === "image" && ann.imageUrl && (
+        // Altura fija en px (no clases responsivas) → el ghost la mide igual que la visible
+        <div className="relative w-full rounded-xl overflow-hidden" style={{ height: "128px" }}>
+          <Image
+            src={ann.imageUrl}
+            alt={ann.title}
+            fill
+            className="object-cover"
+            sizes="(max-width: 640px) 100vw, 50vw"
+          />
+        </div>
+      )}
+
+      {ann.type === "video" && ann.videoUrl && (
+        <div className="relative w-full rounded-xl overflow-hidden" style={{ aspectRatio: "16/9" }}>
+          <iframe
+            src={ann.videoUrl}
+            className="absolute inset-0 w-full h-full"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+      )}
+
+      <p className="text-sm lg:text-base font-semibold leading-snug text-sky-100/85">{ann.title}</p>
+      <p className="text-[11px] lg:text-sm leading-relaxed text-sky-300/50">{ann.body}</p>
+    </div>
+  );
+}
+
+// ─── CAMBIO 2: panel extraído como componente propio con ghost layer
+// El ghost renderiza todas las tarjetas invisibles (visibility:hidden, no display:none)
+// para que el DOM calcule su altura real incluyendo imágenes.
+// onLoad en las imágenes del ghost dispara una re-medición.
+// La altura máxima se fija en el contenedor visible → nunca hay saltos.
+function AnnouncementPanel({ activeAnns, annLabel, annAria }: { activeAnns: Announcement[]; annLabel: string; annAria: string }) {
+  const [index, setIndex]   = useState(0);
+  const [panelH, setPanelH] = useState<number | null>(null);
+  const ghostRef            = useRef<HTMLDivElement>(null);
+  const autoRef             = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const measure = useCallback(() => {
+    if (!ghostRef.current) return;
+    const cards = ghostRef.current.querySelectorAll<HTMLElement>("[data-ghost-card]");
+    let max = 0;
+    cards.forEach((el) => { if (el.offsetHeight > max) max = el.offsetHeight; });
+    if (max > 0) setPanelH(max);
+  }, []);
+
+  useEffect(() => {
+    measure();
+    const t1 = setTimeout(measure, 150);
+    const t2 = setTimeout(measure, 600);
+
+    const observer = new ResizeObserver(measure);
+    if (ghostRef.current) {
+      const cards = ghostRef.current.querySelectorAll<HTMLElement>("[data-ghost-card]");
+      cards.forEach((card) => observer.observe(card));
+    }
+
+    window.addEventListener("resize", measure);
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+      window.removeEventListener("resize", measure);
+      observer.disconnect();
+    };
+  }, [measure, activeAnns]);
+
+  useEffect(() => {
+    if (activeAnns.length <= 1) return;
+    autoRef.current = setInterval(() => setIndex((i) => (i + 1) % activeAnns.length), 5000);
+    return () => { if (autoRef.current) clearInterval(autoRef.current); };
+  }, [activeAnns.length]);
+
+  const bump = (dir: 1 | -1) => {
+    if (autoRef.current) clearInterval(autoRef.current);
+    setIndex((i) => (i + dir + activeAnns.length) % activeAnns.length);
+  };
+
+  return (
+    <div className="flex-1 rounded-2xl p-4 sm:p-5 lg:p-6 flex flex-col gap-3 lg:gap-4 border border-sky-300/20 bg-sky-300/5">
+      {/* Header */}
+      <div className="flex items-center justify-between">
+        <span className="text-[9px] lg:text-[10px] font-bold tracking-[0.22em] uppercase text-sky-300/40">
+          {annLabel}
+        </span>
+        {activeAnns.length > 1 && (
+          <div className="flex items-center gap-1.5">
+            <button onClick={() => bump(-1)} className="p-0.5 rounded-lg text-sky-300/40 hover:text-sky-300/80 transition-colors">
+              <ChevronLeft className="h-3.5 w-3.5 lg:h-4 lg:w-4" />
+            </button>
+            <span className="text-[9px] lg:text-[10px] tabular-nums text-sky-300/30">
+              {index + 1}/{activeAnns.length}
+            </span>
+            <button onClick={() => bump(1)} className="p-0.5 rounded-lg text-sky-300/40 hover:text-sky-300/80 transition-colors">
+              <ChevronRight className="h-3.5 w-3.5 lg:h-4 lg:w-4" />
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* Ghost layer: in normal flow (so width matches panel), zero height so it
+          doesn't affect layout. visibility:hidden keeps images loading & measurable. */}
+      <div
+        ref={ghostRef}
+        className="pointer-events-none"
+        style={{ visibility: "hidden", height: 0, overflow: "hidden" }}
+        aria-hidden
+      >
+        {activeAnns.map((ann) => (
+          <div key={ann.id} data-ghost-card className="pb-3">
+            {ann.type === "image" && ann.imageUrl ? (
+              <div className="flex flex-col gap-2">
+                <div className="relative w-full rounded-xl overflow-hidden" style={{ height: "128px" }}>
+                  <Image
+                    src={ann.imageUrl}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    onLoad={measure}
+                  />
+                </div>
+                <p className="text-sm font-semibold">{ann.title}</p>
+                <p className="text-[11px]">{ann.body}</p>
+              </div>
+            ) : (
+              <AnnouncementCard ann={ann} />
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Contenedor visible con altura bloqueada */}
+      <div
+        className="relative"
+        style={{ minHeight: panelH ? `${panelH}px` : undefined }}
+      >
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeAnns[index].id}
+            initial={{ opacity: 0, x: 8 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -8 }}
+            transition={{ duration: 0.2 }}
+            className="relative"
+          >
+            <AnnouncementCard ann={activeAnns[index]} />
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* Dots */}
+      {activeAnns.length > 1 && (
+        <div className="flex gap-1.5 justify-center mt-1">
+          {activeAnns.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => { if (autoRef.current) clearInterval(autoRef.current); setIndex(i); }}
+              className="h-1 rounded-full transition-all duration-300"
+              style={{
+                width: i === index ? "16px" : "5px",
+                backgroundColor: i === index ? activeAnns[index].accent : "rgba(127,192,223,0.3)",
+              }}
+              aria-label={`${annAria} ${i + 1}`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Todo lo de abajo es idéntico al original ─────────────────────────────────
+export default function ClientHome({ lang, home }: Props) {
+  const [isMounted, setIsMounted] = useState(false);
+  const activeAnns = (home.items as Announcement[]).filter((a) => a.active);
+
+  useEffect(() => {
+    setIsMounted(true);
+    // Desktop only: lock body scroll since layout is fixed height
+    if (window.innerWidth >= 768) {
+      document.body.style.overflow = "hidden";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, []);
+
+  if (!isMounted) {
+    return (
+      <main className="h-screen flex items-center justify-center bg-[#0a0c15]">
+        <span className="text-xs text-sky-300/40 tracking-widest">{home.loading}</span>
+      </main>
+    );
+  }
+
+  return (
+    <main
+      className="relative bg-[#0a0c15]"
+      style={{ paddingLeft: `${SIDEBAR_W}px` }}
+    >
+      <style>{`
+        /* Desktop: full height, no scroll, vertically centered */
+        @media (min-width: 768px) {
+          main {
+            height: 100dvh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        /* Mobile: scrollable, topbar offset, sidebar removed */
+        @media (max-width: 767px) {
+          main {
+            padding-left: 0 !important;
+            min-height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-y: auto;
+          }
+        }
+      `}</style>
+
+      <div className="relative z-10 w-full max-w-4xl lg:max-w-6xl xl:max-w-7xl px-5 sm:px-8 lg:px-12 flex flex-col gap-5 sm:gap-6 lg:gap-7 py-[calc(56px+2rem)] md:py-10 lg:py-12">
+        {/* Hero — idéntico */}
+        <motion.div
+          initial={{ opacity: 0, y: -12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="text-center lg:text-left"
+        >
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-none mb-3 lg:mb-5 text-sky-50">
+            {home.hero.title}
+          </h1>
+          <p className="text-[10px] sm:text-xs lg:text-sm tracking-[0.25em] uppercase text-sky-300/50 lg:pt-2">
+            {home.hero.subtitle}
+          </p>
+        </motion.div>
+
+        {/* CTAs + Announcements — idéntico salvo que ahora usa <AnnouncementPanel> */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-5 items-stretch"
+        >
+          <div className="flex sm:flex-col gap-2.5 sm:gap-2 sm:w-44 lg:w-52 shrink-0">
+            <TransitionLink
+              href={`/${lang}/commissions`}
+              className="group flex-1 sm:flex-none flex items-center justify-between px-4 sm:px-5 lg:px-6 py-3 sm:py-3.5 lg:py-4 rounded-2xl text-sm lg:text-base font-semibold tracking-wide text-sky-100/90 border border-sky-300/30 bg-sky-300/10 hover:bg-sky-300/20 transition-all duration-200"
+            >
+              <span>{home.cta.commissions}</span>
+              <span className="text-sky-300/50 group-hover:text-sky-300/80 transition-colors text-xs ml-2">→</span>
+            </TransitionLink>
+
+            <TransitionLink
+              href={`/${lang}/about`}
+              className="group flex-1 sm:flex-none flex items-center justify-between px-4 sm:px-5 lg:px-6 py-3 sm:py-3.5 lg:py-4 rounded-2xl text-sm lg:text-base font-semibold tracking-wide text-sky-200/70 border border-indigo-300/30 bg-indigo-300/5 hover:bg-indigo-300/15 hover:text-sky-100/90 transition-all duration-200"
+            >
+              <span>{home.cta.about}</span>
+              <span className="text-sky-300/40 group-hover:text-sky-300/70 transition-colors text-xs ml-2">→</span>
+            </TransitionLink>
+          </div>
+
+          {/* CAMBIO 3: reemplaza el bloque inline por el componente */}
+          {activeAnns.length > 0 && <AnnouncementPanel activeAnns={activeAnns} annLabel={home.announcements.label} annAria={home.announcements.aria} />}
+        </motion.div>
+
+        {/* Iconos sociales — idéntico */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.25, duration: 0.4 }}
+          className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 lg:gap-3"
+        >
+          {SOCIALS.map(({ key, Icon, href, hoverClass }, i) => (
+            <motion.a
+              key={key}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={key}
+              initial={{ opacity: 0, y: 4 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 + i * 0.04, duration: 0.3 }}
+              className={`
+                flex items-center justify-center
+                w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12
+                rounded-full border border-sky-300/20 bg-sky-300/5 
+                text-sky-300/60 transition-all duration-200
+                ${hoverClass}
+              `}
+            >
+              <Icon className="h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6" />
+            </motion.a>
+          ))}
+        </motion.div>
+      </div>
+    </main>
+  );
+}
