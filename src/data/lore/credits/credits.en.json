@@ -1,0 +1,57 @@
+{
+  "title": "Credits",
+  "subtitle": "People and collaborators who make this project possible",
+  "sections": {
+    "members": "wakkies"
+  },
+  "cards": [
+    {
+      "title": "Project Owner",
+      "name": "Walker",
+      "role": "wakku",
+      "description": "Design of Lia, visual identity, graphic assets, website, etc.",
+      "image": "/images/assets/credits/wakku.png",
+      "icon": "Star",
+      "iconBg": "bg-indigo-400/20",
+      "iconColor": "text-indigo-300",
+      "badgeBg": "bg-indigo-400/10",
+      "badgeColor": "text-indigo-200",
+      "link": "https://twitter.com/wakku_wav",
+      "linkText": "Twitter / X",
+      "socialIcon": "x"
+    },
+    {
+      "title": "Logo Design",
+      "name": "CoraBitz",
+      "role": "Graphic Designer",
+      "description": "Creation of the official wakku logo and graphic assets.",
+      "image": "/images/assets/credits/cora.png",
+      "icon": "Palette",
+      "iconBg": "bg-pink-500/20",
+      "iconColor": "text-pink-500",
+      "badgeBg": "bg-pink-500/10",
+      "badgeColor": "text-pink-400",
+      "link": "https://twitter.com/CoraBitz",
+      "linkText": "Twitter / X",
+      "socialIcon": "x"
+    },
+    {
+      "title": "Name Idea",
+      "name": "Cris",
+      "role": "Friend",
+      "description": "Was the first person to suggest the name 'waku waku', which was later modified to 'wakku'.",
+      "image": "/images/assets/credits/cris.jpeg",
+      "icon": "Heart",
+      "iconBg": "bg-red-500/20",
+      "iconColor": "text-red-500",
+      "badgeBg": "bg-red-500/10",
+      "badgeColor": "text-red-400",
+      "link": "https://www.tiktok.com/@criselcris09",
+      "linkText": "Tiktok",
+      "socialIcon": "tiktok"
+    }
+  ],
+  "membersList": [],
+  "footerNote": "Thanks to everyone who supports the project",
+  "backToLore": "Back"
+}

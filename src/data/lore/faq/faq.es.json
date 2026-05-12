@@ -1,0 +1,59 @@
+{
+  "backToLore": "Volver",
+  "title": "Preguntas y Respuestas",
+  "subtitle": "Las dudas más comunes sobre mí.",
+  "questions": [
+    {
+      "q": "¿Quién es wakku?",
+      "a": "wakku es el nombre del proyecto musical de Walker. Detrás del personaje está Alan, alguien apasionado por la música. A través de wakku, Alan crea contenido y música original, explorando diferentes sonidos y estilos."
+    },
+    {
+      "q": "¿Qué significa 'wakku'?",
+      "a": "El nombre 'wakku' surgió de forma espontánea un día en el que estaba buscando un nombre para mi proyecto musical, entonces le pregunté  a unos amigos por ideas y uno de ellos dijo '¿Qué tal waku waku?' y me gustó el sonido y el parentezco a 'Walker', así que lo adopté y con el pasar del tiempo pasó a 'wakku'. No tiene un significado específico, pero me gusta relacionarlo con la palabra japonesa 'waku' que significa 'brotar' o 'fluir'. O también con la expresión 'waku waku' que se usa para describir la emoción o anticipación por algo divertido o emocionante."
+    },
+    {
+      "q": "¿Cómo prefieres ser llamado?",
+      "a": "Walker o wakku está bien. En general, no tengo una preferencia estricta, así que puedes usar el que te resulte más cómodo."
+    },
+    {
+      "q": "¿Desde cuándo haces música?",
+      "a": "Empecé alrededor de 2021 haciendo experimentos y explorando diferentes estilos y sonidos, pero fue a finales de 2022 cuando comencé a tomar la música de manera más seria y constante. Desde entonces, he estado creando, mejorando y publicando música regularmente."
+    },
+    {
+      "q": "¿Tienes alguna formación musical formal?",
+      "a": "No tengo una formación musical formal, pero he aprendido mucho a través de la práctica, algunos tutoriales en línea, experimentación y a través de la interacción con otros músicos. Si me preguntas si sé leer partituras, la respuesta es no, pero eso no me ha detenido para crear música que me gusta y que otros disfrutan."
+    },
+    {
+      "q": "¿Qué te inspira a hacer música?",
+      "a": "Me inspiran muchas cosas, desde mis propias emociones y experiencias hasta la música de otros artistas que admiro. También me gusta experimentar con sonidos y ver qué puedo crear a partir de ellos. La idea de compartir algo que he creado con otras personas también es una gran motivación para mí."
+    },
+    {
+      "q": "¿Qué artistas te inspiran?",
+      "a": "Me inspiran muchos artistas. Algunos de mis artistas favoritos incluyen a Virtual Riot, Eliminate, Skrillex, Teminite y Knock2. También me inspiran amigos como lo son alwk, thwl, Demonstep, Maiandraw, Diaman, entre otros."
+    },
+    {
+      "q": "¿Haces todo tu solo?",
+      "a": "Cuando se trata de composición, mezcla y masterización, sí, hago todo yo solo cuando no se trata de colaboraciones. Cuando se trata de arte para visualizadores o ilustraciones, a menudo colaboro con otros artistas con el fin de agilizar el proceso y obtener resultados de mayor calidad. Por ejemplo, mi logo fue diseñado por CoraBitz, y algunas ilustraciones para visualizadores han sido hechas por amigos como Ratypea250 o artistas de los proyectos en los que colaboro."
+    },
+    {
+      "q": "¿Cuál es tu meta a largo plazo con wakku?",
+      "a": "Mi meta a largo plazo con wakku es seguir creando música y contenido que me apasione, y eventualmente salirme de la comunidad de Friday Night Funkin'. Me gustaría construir una comunidad de fans y colaboradores que disfruten de lo que hago y que también se sientan inspirados a crear sus propias cosas. En el futuro me gustaría explorar diferentes formas de arte y expresión creativa, y ver hasta dónde puedo llevar este proyecto."
+    },
+    {
+      "q": "¿Quién es la chica anime que aparece en tus perfiles?",
+      "a": "Ella es Lia, un personaje original hecho por mi, representa la identidad visual de wakku. Se ha convertido en un símbolo importante para el proyecto. Aparece en perfiles y otros materiales gráficos relacionados con wakku."
+    },
+    {
+        "q": "¿Lia tiene lore?",
+        "a": "Lo tiene, pero es algo que quiero mantener en secreto por ahora. Lo que puedo decir es que ella es una androide con alma y mente humana hecha por una organización secreta que buscaba la inmortalidad. Eventualmente estaré añadiendo un apartado dedicado a mis personajes donde revelaré más información sobre ella y otros personajes de mi universo."
+    },
+    {
+        "q": "¿Lia es tu sona?",
+        "a": "No, Lia no es mi sona. Ella es un personaje que representa la identidad visual de wakku, pero no es una representación directa de mí mismo. Mi sona es Walker, él es la representación más cercana a Alan dentro y fuera del universo de wakku."
+    },
+    {
+      "q": "¿Quién es el chico que aparece como segunda imagen en la página Acerca de?",
+      "a": "Él es mi sona, Walker."
+    }
+  ]
+}

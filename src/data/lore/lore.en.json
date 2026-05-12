@@ -1,36 +1,30 @@
 {
-  "title": "Lore",
-  "description": "Historias, personajes y el mundo que rodea mis proyectos.",
+  "title": "wakku things",
+  "description": "Things about me, people, characters and the world surrounding my projects.",
   
   "sections": {
-    "characters": {
-      "title": "Personajes",
-      "description": "Conoce a los protagonistas de este universo."
+    "credits": {
+      "title": "Credits",
+      "description": "People and collaborators that make this project possible.",
+      "icon": "Heart",
+      "iconBg": "bg-indigo-500/20",
+      "iconColor": "text-indigo-500"
     },
-    "mainStory": {
-      "title": "Historia Principal",
-      "description": "Descubre la narrativa central y las tramas principales."
-    },
-    "funFacts": {
-      "title": "Datos Curiosos",
-      "description": "Trivia interesante y detalles detrás de mi y mis proyectos.",
-      "facts": [
-        "I start my day with a cup of coffee and a playlist of ambient music.",
-        "Most of the lore ideas come while I'm on long walks.",
-        "I keep a notebook full of story fragments and character sketches."
-      ]
-    },
-    "songLore": {
-      "title": "Lore de Canciones",
-      "description": "Significados ocultos e historias detrás de mi música."
+    "q&a": {
+      "title": "Frequently Asked Questions",
+      "description": "Answers to the most common questions about me.",
+      "icon": "HelpCircle",
+      "iconBg": "bg-cyan-500/20",
+      "iconColor": "text-cyan-500"
     }
   },
   
-  "exploreTitle": "Explora mi Universo",
-  "viewCharacters": "Explorar personajes",
-  "featured": "Personajes destacados",
-  "story": "Historia principal",
-  "funfacts": "Datos curiosos",
-  "musicsecrets": "Secretos de mi música",
-  "explore": "Explorar sección"
+  "exploreTitle": "wakku's Universe",
+  "viewCharacters": "Explore Characters",
+  "featured": "Featured Characters",
+  "story": "Main Story",
+  "funfacts": "Fun Facts",
+  "musicsecrets": "Music Secrets",
+  "explore": "Explore Section",
+  "credits": "See credits"
 }

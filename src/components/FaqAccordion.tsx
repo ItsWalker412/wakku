@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 type Item = {
   q: string;
@@ -16,27 +16,30 @@ export function FaqAccordion({ items }: { items: Item[] }) {
       {items.map((item, i) => (
         <div
           key={item.q}
-          className="rounded-xl border border-white/10"
+          className="overflow-hidden rounded-xl border border-border/40 bg-gradient-to-br from-background/90 to-muted/20 transition-all hover:border-accent/30"
         >
           <button
             onClick={() => setOpen(open === i ? null : i)}
-            className="flex w-full items-center justify-between p-4 text-left"
+            className="flex w-full items-center justify-between p-4 text-left font-medium transition-colors hover:text-accent sm:p-5"
           >
-            <span className="font-medium">{item.q}</span>
-            <span className="text-sm opacity-60">
+            <span>{item.q}</span>
+            <span className={`ml-4 flex h-6 w-6 items-center justify-center rounded-full bg-accent/10 text-sm transition-transform duration-200 ${open === i ? 'rotate-180' : ''}`}>
               {open === i ? "−" : "+"}
             </span>
           </button>
 
-          <AnimatePresence>
+          <AnimatePresence initial={false}>
             {open === i && (
               <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                className="overflow-hidden px-4 pb-4 text-muted-foreground"
+                initial={{ maxHeight: 0, opacity: 0 }}
+                animate={{ maxHeight: "500px", opacity: 1 }}
+                exit={{ maxHeight: 0, opacity: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="overflow-hidden"
               >
-                {item.a}
+                <div className="border-t border-border/40 p-4 text-sm text-muted-foreground sm:p-5">
+                  {item.a}
+                </div>
               </motion.div>
             )}
           </AnimatePresence>

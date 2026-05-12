@@ -15,6 +15,7 @@ type Props = {
     contact: string;
     lore: string;
     music: string;
+    credits: string;
   };
 };
 
@@ -28,7 +29,7 @@ export function Navbar({ lang, dict }: Props) {
     { href: `/${lang}/commissions`, label: dict.commissions },
     { href: `/${lang}/contact`, label: dict.contact },
     { href: `/${lang}/music`, label: dict.music },
-/*     { href: `/${lang}/lore`, label: dict.lore }, */
+    { href: `/${lang}/wakku`, label: dict.lore },
   ];
 
   useEffect(() => {
@@ -69,8 +70,8 @@ export function Navbar({ lang, dict }: Props) {
       ref={menuRef}
       className={`fixed top-0 z-50 w-full transition-all duration-200 ${
         isScrolled 
-          ? "border-b border-border/50 bg-background/95 backdrop-blur-md shadow-sm" 
-          : "border-b border-border/30 bg-background/90 backdrop-blur-sm"
+          ? "border-b border-border/50 bg-background shadow-sm" 
+          : "border-b border-border/30 bg-background"
       }`}
     >
       <nav className="mx-auto max-w-5xl px-6 py-3">
@@ -129,7 +130,7 @@ export function Navbar({ lang, dict }: Props) {
             : "max-h-0 opacity-0 invisible"
         }`}
       >
-        <div className="bg-background/95 backdrop-blur-sm px-6 py-3">
+        <div className="bg-background px-6 py-3">
           <div className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <TransitionLink

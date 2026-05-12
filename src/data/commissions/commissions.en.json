@@ -1,86 +1,67 @@
 {
   "title": "Commissions",
   "description": "Professional custom music commissions. Each piece is created with attention to detail and care.",
-  
-  "recommended": "Recommended",
-  
+  "waitlist": {
+    "title": "Waitlist",
+    "status": "CLOSED",
+    "button": "Go to Ko-fi"
+  },
+  "optionsTitle": "Packs",
+  "recommended": "Most Requested",
+  "currency": "USD",
+  "durationUnit": "min",
+  "pricingNote": "+{price}/30s",
+  "orderNow": "Go to Ko-fi",
+  "fullRightsLabel": "Full Rights",
   "comparison": {
     "features": [
-      "Price",
       "Delivery Time",
       "Revisions",
       "Commercial Use",
       "Included Formats",
       "Stems",
-      "Rights",
-      "Maximum Length",
+      "Full Rights",
+      "Max Duration",
       "Best For"
     ],
     "items": [
       {
         "title": "Song / OST",
         "recommended": true,
-        "values": [
-          "$20 USD",
-          "10+ days",
-          "8 included",
-          "Included",
-          "MP3, OGG, WAV",
-          "+$10 USD for stems",
-          "+200% for full rights",
-          "2 minutes (+30s = +$6 USD)",
-          "Main themes, FNF, etc."
-        ]
+        "basePrice": 25,
+        "extraPer30Seconds": 6,
+        "baseDuration": 2,
+        "maxDuration": 4,
+        "stemsPrice": 10,
+        "fullRightsPercentage": 200,
+        "koFiLink": "https://ko-fi.com/c/1784250759",
+        "values": ["10+ days", "8 included", "Included", "MP3 + OGG + WAV", "Not included", "", "2-4 min", "Main themes, FNF, etc."]
       },
       {
         "title": "Background Music (BGM)",
         "recommended": false,
-        "values": [
-          "$16 USD",
-          "3–12 days",
-          "5 included",
-          "Included",
-          "MP3, OGG, WAV",
-          "+$4 USD for stems",
-          "+150% for full rights",
-          "1:30 minutes (+30s = +$2 USD)",
-          "Videos, games, streams, etc."
-        ]
+        "basePrice": 18,
+        "extraPer30Seconds": 4,
+        "baseDuration": 1.5,
+        "maxDuration": 3,
+        "stemsPrice": 6,
+        "fullRightsPercentage": 150,
+        "koFiLink": "https://ko-fi.com/c/aa2cb49618",
+        "values": ["3–12 days", "5 included", "Included", "MP3 + OGG + WAV", "Not included", "", "1.5-3 min", "Videos, games, streams, etc."]
       },
       {
         "title": "Intro / Jingle",
         "recommended": false,
-        "values": [
-          "$12 USD",
-          "3–8 days",
-          "3 included",
-          "Included",
-          "MP3, WAV",
-          "Not available",
-          "+100% for full rights",
-          "30 seconds",
-          "Intros, outros, bumpers"
-        ]
-      },
-      {
-        "title": "Song Mastering",
-        "recommended": false,
-        "values": [
-          "$10 USD",
-          "1–4 days",
-          "3 included",
-          "Included",
-          "OGG, WAV",
-          "Not applicable",
-          "+50% for full rights",
-          "Not applicable",
-          "Unmastered songs"
-        ]
+        "basePrice": 12,
+        "extraPer30Seconds": 0,
+        "baseDuration": 0.5,
+        "maxDuration": 0.5,
+        "fullRightsPercentage": 100,
+        "koFiLink": "https://ko-fi.com/c/d26b4ecba2",
+        "values": ["3–8 days", "3 included", "Included", "MP3 + WAV", "", "", "30s", "Intros, outros, cortinillas"]
       }
     ]
   },
-  
-  "optionsTitle": "Commission Options",
   "howItWorks": "How It Works",
   "processSteps": [
     {
@@ -96,11 +77,10 @@
       "description": "Sketching, refinement, and finalization."
     },
     {
-      "title": "Delivery",
+      "title": "Deliver",
       "description": "You receive the final files in a .zip along with usage rights."
     }
   ],
-  
   "termsPreview": {
     "title": "Terms and Conditions",
     "description": "Before requesting a commission, please review the terms.",
@@ -113,17 +93,10 @@
     ],
     "link": "Read Full Terms"
   },
-  
-  "waitlist": {
-    "title": "Waitlist",
-    "status": "CLOSED",
-    "note": "By continuing, you agree to the Terms and Conditions.",
-    "button": "Go to Ko-fi"
-  },
-  
   "cta": {
     "title": "Ready to bring your vision to life?",
     "description": "Commissions are currently closed. Feel free to contact me if you have any questions!",
     "askButton": "Ask a Question"
   }
+  
 }

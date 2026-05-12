@@ -127,7 +127,7 @@ export default async function WalkerPage({ params }: Props) {
         {/* Botón de volver */}
         <div className="mb-6">
           <Link
-            href={`/${lang}/lore/characters`}
+            href={`/${lang}/wakku/characters`}
             className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-4 py-2 text-sm backdrop-blur-sm transition-all hover:border-accent hover:bg-accent/10"
           >
             <ChevronLeft className="h-3 w-3" />

@@ -16,5 +16,5 @@ export default async function Home({ params }: Props) {
 
   const home = await getDictionary(lang as Locale, "home");
 
-  return <ClientHome lang={lang} home={home} />;
+  return <ClientHome lang={lang} home={home} loadingGif="/images/assets/loading.gif" />;
 }

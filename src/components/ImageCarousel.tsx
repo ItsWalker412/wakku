@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -11,17 +11,33 @@ interface ImageCarouselProps {
 
 export default function ImageCarousel({ images, interval = 3000 }: ImageCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
+  // Función para reiniciar el temporizador
+  const resetTimer = useCallback(() => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    timerRef.current = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
     }, interval);
-
-    return () => clearTimeout(timer);
   }, [images.length, interval]);
 
+  // Iniciar el temporizador al montar
+  useEffect(() => {
+    resetTimer();
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [resetTimer]);
+
+  // Cambiar a una imagen específica y reiniciar el timer
+  const goToIndex = (index: number) => {
+    setCurrentIndex(index);
+    resetTimer();
+  };
+
   return (
-    <div className="relative h-48 w-48 sm:h-56 sm:w-56 md:h-64 md:w-64 lg:h-72 lg:w-72">
+    // Contenedor centrado con mx-auto
+    <div className="relative mx-auto h-48 w-48 sm:h-56 sm:w-56 md:h-64 md:w-64 lg:h-72 lg:w-72">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
@@ -48,12 +64,12 @@ export default function ImageCarousel({ images, interval = 3000 }: ImageCarousel
         </motion.div>
       </AnimatePresence>
 
-      {/* Indicadores - AHORA MÁS PEQUEÑOS */}
+      {/* Indicadores más pequeños */}
       <div className="absolute -bottom-4 left-1/2 flex -translate-x-1/2 gap-1">
         {images.map((_, index) => (
           <button
             key={index}
-            onClick={() => setCurrentIndex(index)}
+            onClick={() => goToIndex(index)} // Ahora reinicia el timer
             className={`
               h-[3px] w-[3px] 
               sm:h-1.5 sm:w-1.5 

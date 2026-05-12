@@ -59,14 +59,14 @@ export default function CharactersGrid({
             className="group relative"
           >
             <Link
-              href={`/${lang}/lore/${char.id}`}
+              href={`/${lang}/wakku/${char.id}`}
               className="block h-full"
             >
               <div className="relative h-full overflow-hidden rounded-2xl border border-border/50 bg-gradient-to-b from-background to-muted/10 shadow-lg transition-all duration-300 group-hover:border-accent/30 group-hover:shadow-xl">
                 
                 <div className="relative aspect-[3/4] overflow-hidden">
                   <Image
-                    src={`/lore/${char.id}.png`}
+                    src={`/wakku/${char.id}.png`}
                     alt={char.name}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

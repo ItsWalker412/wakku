@@ -5,7 +5,8 @@ import {
   Sparkles,
   Globe,
   ExternalLink,
-  Gamepad2
+  Gamepad2,
+  Headphones
 } from "lucide-react";
 import {
   SiYoutube,
@@ -51,29 +52,27 @@ export default async function MusicPage({ params }: Props) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
+    <div className="min-h-screen from-background to-muted/10">
       <section className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
         
-        <div className="relative mb-12 overflow-hidden rounded-2xl border border-border/50 bg-gradient-to-br from-background to-purple-500/5 p-6 shadow-lg sm:rounded-3xl sm:p-8 md:mb-16 md:p-10">
+        {/* Hero Section - color reemplazado */}
+        <div className="relative mb-12 overflow-hidden rounded-2xl border border-border/40 bg-gradient-to-br from-background to-[#8ea2e4]/5 p-6 shadow-sm sm:rounded-3xl sm:p-8 md:mb-16 md:p-10">
           <div className="relative z-10 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="rounded-full bg-purple-500/20 p-2">
-                <Sparkles className="h-5 w-5 text-purple-500 sm:h-6 sm:w-6" />
+              <div className="rounded-full bg-[#8ea2e4]/20 p-2">
+                <Sparkles className="h-5 w-5 text-[#8ea2e4] sm:h-6 sm:w-6" />
               </div>
               <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
                 {dict.title}
               </h1>
             </div>
-            
             <p className="text-lg text-muted-foreground sm:text-xl">
               {dict.subtitle}
             </p>
           </div>
-          
-          <div className="absolute -top-10 -right-10 h-20 w-20 rounded-full bg-purple-500/10 blur-2xl sm:-top-16 sm:-right-16 sm:h-32 sm:w-32 sm:blur-3xl"></div>
-          <div className="absolute -bottom-10 -left-10 h-20 w-20 rounded-full bg-pink-500/10 blur-2xl sm:-bottom-16 sm:-left-16 sm:h-32 sm:w-32 sm:blur-3xl"></div>
         </div>
 
+        {/* Plataformas destacadas */}
         <div className="mb-12 sm:mb-16 md:mb-20">
           <div className="mb-6 flex items-center gap-3 sm:mb-8 md:mb-10">
             <div className="rounded-full bg-primary/20 p-2">
@@ -95,7 +94,7 @@ export default async function MusicPage({ params }: Props) {
                   href={platformLinks[section.id as keyof typeof platformLinks] || "#"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative overflow-hidden rounded-2xl border border-border/50 bg-gradient-to-br from-background/60 to-background/40 p-6 backdrop-blur-sm transition-all duration-300 hover:scale-[1.02] hover:border-accent/30 hover:shadow-xl sm:rounded-3xl sm:p-8"
+                  className="group relative overflow-hidden rounded-2xl border border-border/40 bg-gradient-to-br from-background/90 to-muted/20 p-6 transition-all duration-300 hover:border-accent/30 hover:shadow-md sm:rounded-3xl sm:p-8"
                 >
                   <div className={`absolute inset-0 bg-gradient-to-br ${gradientClass}/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100`}></div>
                   
@@ -112,31 +111,22 @@ export default async function MusicPage({ params }: Props) {
                       {section.description}
                     </p>
                     
-                      <span className="text-sm font-medium text-accent">
-                        {dict.labels.exploreContent} →
-                      </span>
+                    <span className="text-sm font-medium text-accent">
+                      {dict.labels.exploreContent} →
+                    </span>
                   </div>
-                  
-                  <div className="absolute inset-0 rounded-2xl border-2 border-transparent transition-all duration-300 group-hover:border-accent/20"></div>
                 </a>
               );
             })}
           </div>
         </div>
 
-        <div className="rounded-2xl border border-border/50 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-purple-500/10 p-6 text-center shadow-sm sm:rounded-3xl sm:p-8">
+        {/* CTA final - degradado con el nuevo color */}
+        <div className="rounded-2xl border border-border/40 bg-gradient-to-r from-[#8ea2e4]/10 to-[#8ea2e4]/10 p-6 text-center shadow-sm sm:rounded-3xl sm:p-8 md:p-10 lg:p-12">
           <div className="mx-auto max-w-2xl">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-purple-500/20 px-4 py-2">
-              <Sparkles className="h-4 w-4 text-purple-500" />
-              <span className="text-sm font-medium">
-                {dict.labels.latestReleases}
-              </span>
-            </div>
-            
             <h3 className="mb-3 text-xl font-bold text-foreground sm:mb-4 sm:text-2xl">
               {dict.labels.finalNoteMessage}
             </h3>
-            
             <p className="text-sm text-muted-foreground sm:text-base">
               {dict.labels.finalNoteDescription}
             </p>

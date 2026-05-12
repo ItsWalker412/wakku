@@ -46,6 +46,14 @@ const dictionaries = {
     es: () => import("@/data/contact/contact.es.json").then(m => m.default),
     en: () => import("@/data/contact/contact.en.json").then(m => m.default),
   },
+  credits: {
+    es: () => import("@/data/lore/credits/credits.es.json").then(m => m.default),
+    en: () => import("@/data/lore/credits/credits.en.json").then(m => m.default),
+  },
+  faq: {
+    es: () => import("@/data/lore/faq/faq.es.json").then(m => m.default),
+    en: () => import("@/data/lore/faq/faq.en.json").then(m => m.default),
+  },
 
 } as const;
 
