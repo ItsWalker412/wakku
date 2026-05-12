@@ -88,8 +88,8 @@ export default function CommissionCard({
       {recommended && (
         <div className="absolute right-3 top-3 z-20">
           <div className="flex items-center gap-1 rounded-full bg-gradient-to-r from-accent to-accent/80 px-3 py-1.5 shadow-md">
-            <Star className="h-3 w-3 text-white" />
-            <span className="text-xs font-bold text-white">{dict.recommended}</span>
+            <Star className="h-3 w-3 text-black" />
+            <span className="text-xs font-bold text-black">{dict.recommended}</span>
           </div>
         </div>
       )}
