@@ -178,7 +178,7 @@ export default function CommissionCard({
           href={finalLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent/90 px-6 py-3 font-semibold text-white shadow-md transition-all duration-300 hover:scale-[1.02] hover:from-accent/90 hover:to-accent"
+          className="group flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent/90 px-6 py-3 font-semibold text-black shadow-md transition-all duration-300 hover:scale-[1.02] hover:from-accent/90 hover:to-accent"
         >
           <ShoppingCart className="h-4 w-4" />
           {dict.orderNow}
